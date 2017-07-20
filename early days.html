@@ -54,6 +54,38 @@ li a:hover:not(.active){
 .active{
 	background-color: #4CAF50;
 }
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext{
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: 110%;
+}
+.tooltip.tooltiptext::after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent black transparent transparent;
+
+}
+	.tooltip:hover .tooltiptext{
+		visibility: visible;
+	}
 	</style>
 </head>
 <body>
@@ -77,5 +109,10 @@ li a:hover:not(.active){
 Hitler was born in Austria, then part of Austria-Hungary, and raised near Linz. He moved to Germany in 1913 and was decorated during his service in the German Army in World War I. He joined the German Workers' Party (DAP), the precursor of the NSDAP, in 1919 and became leader of the NSDAP in 1921. In 1923 he attempted a coup in Munich to seize power. The failed coup resulted in Hitler's imprisonment, during which he dictated the first volume of his autobiography and political manifesto Mein Kampf ("My Struggle"). After his release in 1924, Hitler gained popular support by attacking the Treaty of Versailles and promoting Pan-Germanism, anti-semitism, and anti-communism with charismatic oratory and Nazi propaganda. Hitler frequently denounced international capitalism and communism as being part of a Jewish conspiracy.</p>
 		<iframe width="400" src="https://www.youtube.com/embed/wHM3OckOdds"frameborder="0" allowfullscreen></iframe>
 		<img src="https://www.w3schools.com/css/img_fjords.jpg"	style="width: 33%">
+		<br>
+		<div class="tooltip">Where was hitler born?
+	<span class="tooltiptext">Austria
+	</span>
+</div>
 	</body>
 </html>
